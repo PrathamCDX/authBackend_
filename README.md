@@ -9,6 +9,8 @@ A simple authentication backend built with Node.js, Express, and TypeScript. Thi
 - JWT authentication middleware
 - Modular code structure (controllers, middleware, models, routes, schemas)
 - TypeScript for type safety
+- Admin only access to reset password route-Role Based Access Control
+- Authorisation in /me
 
 ## Project Structure
 
@@ -74,6 +76,7 @@ npx ts-node src/index.ts
   }
 - `GET /api/auth/me` — Get current user info (requires JWT in Authorization header)
   Authorization: Bearer <JWT token>
+
 - `PATCH /api/admin/reset` — Login and receive a JWT
   {
   "email": "user@example.com",
@@ -88,7 +91,3 @@ All incoming requests are validated using Zod schemas before reaching the contro
 ### Authentication
 
 JWT tokens are used for authentication. Pass the token in the `Authorization: Bearer <token>` header for protected routes.
-
-## License
-
-MIT
