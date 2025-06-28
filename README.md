@@ -84,6 +84,14 @@ npx ts-node src/index.ts
   "resetPassword": "new password"
   }
 
+### Sample .env config
+
+DB_NAME=authdata
+DB_USER=root
+DB_PASS=sql2004
+DB_HOST=localhost
+JWT_SECRET=your_jwt_secret
+
 ### Request Validation
 
 All incoming requests are validated using Zod schemas before reaching the controller logic.
